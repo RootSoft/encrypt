@@ -179,8 +179,8 @@ enum RSASignDigest {
 }
 
 final _digestIdFactoryMap = <RSASignDigest, _DigestIdFactory>{
-  RSASignDigest.SHA1: _DigestIdFactory(
-      _hexToBytes('06052b0e03021a'), () => SHA1Digest()),
+  RSASignDigest.SHA1:
+      _DigestIdFactory(decodeHexString('06052b0e03021a'), () => SHA1Digest()),
   RSASignDigest.SHA256: _DigestIdFactory(
       decodeHexString('0609608648016503040201'), () => SHA256Digest())
 };
